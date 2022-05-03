@@ -29,8 +29,8 @@
 
 
 ## Problems Statement
-1.  The primary problem is to extract the data from file for both flight detail information and input data, and store them into a dataset, which it needs to be ensured that there's only one instance for entire data access.
-2.  The secondary problem is to validate the request is good to process in certain circumstance, such as, requested flight exists, the number of seats is available for the category, and also to check if user's payment card is valid based on known rules for different credit card types.
+1.  The primary problem is to extract the data from file for both flight detail information and input data, and store them into a dataset, which it needs to ensure that there's only one instance for entire data access.
+2.  The secondary problem is to validate if the request is good to process in certain circumstance, such as, requested flight exists, the number of seats is available for the category, and also to check if the user's payment card is valid based on known rules for different credit card types.
 
 
 
@@ -48,7 +48,7 @@
 
 ## Design Patterns
 - Singleton
-  - to solve the first problem, Singleton is best option, since it ensures that only one instance of a class is allowed within a system.
+  - To solve the first problem, Singleton is the best option, since it ensures that only one instance of a class is allowed within a system.
      | DataSet      |
      | ----------- |
      | -static datasetInstance |
@@ -63,7 +63,7 @@
   - ![](img/Iterator_diagram.png)
   
 - Chain of Responsibility
-  - The purpose of Chain of Responsibility is given more than one object an opportunity to handle a request by linking receiving objects together. To solve the second problem in this application design, the validation process uses this pattern to check if the request is acceptable to each rule. All the rules can be chained together so that the request can be easily handled by such chain.
+  - The purpose of Chain of Responsibility is given more than one object an opportunity to handle a request by linking receiving objects together. To solve the second problem in this application design, the validation process uses this pattern to check if the request is acceptable to each rule. All the rules can be chained together so that the request can be easily handled by such a chain.
   - ![](img/CoR_diagram.png)
 
 - Factory Method
