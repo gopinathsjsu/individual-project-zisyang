@@ -52,23 +52,26 @@
      | DataSet      |
      | ----------- |
      | -static datasetInstance |
-     | -datasetData      |
+     | -datasetData ...     |
      | ----------------------- |
      | +static getInstance()   |
-     | +datasetOperstions()  |
+     | +datasetOperstions...()  |
 
 
 - Iterator
   - Iterator is used for traversal of the elements such as processing each booking in the list from top to bottom. It can do multiple processes while iterating each item, like create a processed list and a response message.
-  - ![](img/Iterator_diagram.png)
+
+    ![](img/Iterator_diagram.png)
   
 - Chain of Responsibility
   - The purpose of Chain of Responsibility is given more than one object an opportunity to handle a request by linking receiving objects together. To solve the second problem in this application design, the validation process uses this pattern to check if the request is acceptable to each rule. All the rules can be chained together so that the request can be easily handled by such a chain.
-  - ![](img/CoR_diagram.png)
+
+    ![](img/CoR_diagram.png)
 
 - Factory Method
   - Factory Method provides not only an interface to create objects, but also allows subclasses to control the actual operations. It's used to handle the output files for different file extension for each response object of the application.
-  - ![](img/Factory_diagram.png)
+
+    ![](img/Factory_diagram.png)
 
 ## Class Diagram
 ![](img/class_diagram.png)
