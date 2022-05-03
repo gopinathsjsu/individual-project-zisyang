@@ -78,6 +78,7 @@
 
 #### Test Case 1
 Input:
+
 ![](img/TestCase1_input.png)
 
 Output:
@@ -92,6 +93,7 @@ Output.txt:
 
 #### Test Case 2
 Input:
+
 ![](img/TestCase2_input.png)
 
 Output:
