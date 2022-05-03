@@ -29,7 +29,7 @@
 
 
 ## Problems Statement
-1.  The primary problem is to extract the data from file for both flight detail information and input data, and store them into a dataset, which it needs to ensure that there's only one instance for entire data access.
+1.  The primary problem is to extract the data from files for both flight detail information and input data, and store them into a dataset, which it needs to ensure that there's only one instance for entire data access.
 2.  The secondary problem is to validate if the request is good to process in certain circumstance, such as, requested flight exists, the number of seats is available for the category, and also to check if the user's payment card is valid based on known rules for different credit card types.
 
 
