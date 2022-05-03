@@ -63,6 +63,7 @@
 
     ![](img/Iterator_diagram.png)
   
+
 - Chain of Responsibility
   - The purpose of Chain of Responsibility is given more than one object an opportunity to handle a request by linking receiving objects together. To solve the second problem in this application design, the validation process uses this pattern to check if the request is acceptable to each rule. All the rules can be chained together so that the request can be easily handled by such a chain.
 
