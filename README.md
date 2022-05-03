@@ -7,7 +7,7 @@
 
 ## Detailed instructions of building the project and steps to execute
 
-1. Clone or download/unzip zip file from this repository, Open the command line where the project directory is located, e.g.
+1. Clone or download/unzip file from this repository, Open the command line where the project directory is located, e.g.
    ```
    cd <path to the project>/flightbooking
    ```
