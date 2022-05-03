@@ -82,12 +82,15 @@ Input:
 ![](img/TestCase1_input.png)
 
 Output:
+
 ![](img/TestCase1.png)
 
 Output.csv:
+
 ![](img/TestCase1_outputcsv.png)
 
 Output.txt:
+
 ![](img/TestCase1_outputtxt.png)
 
 
@@ -97,10 +100,14 @@ Input:
 ![](img/TestCase2_input.png)
 
 Output:
+
 ![](img/TestCase2.png)
 
 Output.csv:
+
 ![](img/TestCase2_outputcsv.png)
 
 Output.txt:
+
 ![](img/TestCase2_outputtxt.png)
+
