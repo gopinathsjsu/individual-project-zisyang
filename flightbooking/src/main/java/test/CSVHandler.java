@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.LinkedList;
+import java.util.logging.Logger;
 
 public class CSVHandler {
     Path FilePath;
@@ -36,21 +37,28 @@ public class CSVHandler {
 
     public void Load(int skipTopLine) throws Exception {
         if (Files.notExists(FilePath)) {
-            throw new FileNotFoundException();
+            throw new FileNotFoundException(FilePath.toString());
         } else if (!Files.isReadable(FilePath)) {
             throw new IOException("File '" + FilePath.toString() + "' is not Readable");
         } else {
-            FileReader in = new FileReader(FilePath.toFile());
-            BufferedReader reader = new BufferedReader(in);
-            String line = "";
+            Logger logger = Logger.getAnonymousLogger();
 
-            while ((line = reader.readLine()) != null) {
-                if (skipTopLine > 0) {
-                    skipTopLine--;
-                } else {
-                    Content.add(line);
+            FileReader in = new FileReader(FilePath.toFile());
+            try (BufferedReader reader = new BufferedReader(in)) {
+
+                String line = "";
+
+                while ((line = reader.readLine()) != null) {
+                    if (skipTopLine > 0) {
+                        skipTopLine--;
+                    } else {
+                        Content.add(line);
+                    }
                 }
+            } catch (Exception e) {
+                logger.severe(e.toString());
             }
+
         }
     }
 

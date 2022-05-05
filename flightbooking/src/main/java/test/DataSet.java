@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.logging.Logger;
 
 import model.Booked;
 import model.Booking;
@@ -27,14 +28,15 @@ public class DataSet {
 
     public static DataSet getInstance() {
         if (datasetInstance == null) {
-            System.out.println("Create new DataSet Instance");
+            Logger logger = Logger.getAnonymousLogger();
+            logger.info("Create new DataSet Instance");
+
             datasetInstance = new DataSet();
         }
         return datasetInstance;
     }
 
     public static String createKeyString(String flightNumber, String category) {
-        // Premium Economy -> PremiumEconomy
         return String.format("%s_%s", flightNumber, Category.getNameFromText(category));
     }
 
